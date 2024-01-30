@@ -13,10 +13,10 @@ public class MyPanel extends JPanel {
 
     private int x = 100;
     private int y = 100;
-    private int width = 200;
-    private int height = 200;
+    private int width = 50;
+    private int height = 100;
     private int step = 30;
-    private int delta = 10;
+    private int delta = 3;
 
     private ArrayList<Rectangle> outlist = new ArrayList<Rectangle>();
 
@@ -47,8 +47,8 @@ public class MyPanel extends JPanel {
         }
     }
 
-    private void segment(int param) {
-        switch (param) {
+    private void segment(int number) {
+        switch (number) {
             case 1:
                 outlist.add(new Rectangle(x + delta, y, x + width - delta, y));
                 break;
@@ -80,7 +80,25 @@ public class MyPanel extends JPanel {
         }
     }
 
-
-    public void SetSymbols(int i, int i1, int i2) {
+    public void setX(int x) {
+        this.x = x;
     }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public void setStep(int step) {
+        this.step = step;
+    }
+
+
 }
